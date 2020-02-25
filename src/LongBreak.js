@@ -41,7 +41,7 @@ export default class LongBreak extends Component {
     if (min === 0 && sec === 0) {
       clearInterval(this.tick);
     }
-    this.secondsRemaining = this.secondsRemaining - 1;
+    this.secondsRemaining--;
   };
 
   startCountdown = () => {
