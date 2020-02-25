@@ -3,7 +3,7 @@ import './App.css';
 import Pomodoro from './Pomodoro.js';
 import ShortBreak from './ShortBreak.js';
 import LongBreak from './LongBreak.js';
-import tomato from './Tomato.gif'
+import tomato from './assets/Tomato.gif'
 
 export default class App extends Component {
     constructor(props){
@@ -43,9 +43,11 @@ export default class App extends Component {
         return(
             <div className = 'backdrop'>
                 <h1>Tomodoro Timer</h1>
-                <button onClick = {this.displayPomodoro}>Pomodoro</button>
-                <button onClick = {this.displayShortBreak}>Short Break</button>
-                <button onClick = {this.displayLongBreak}>Long Break</button>
+                <div className="buttons">
+                    <button onClick={this.displayPomodoro}>Pomodoro</button>
+                    <button onClick={this.displayShortBreak}>Short Break</button>
+                    <button onClick={this.displayLongBreak}>Long Break</button>
+                </div>
                 <br/>
                 <br/>
                 {this.state.showPomodoro && <Pomodoro/>}
